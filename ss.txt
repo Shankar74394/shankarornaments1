@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shankar Ornaments | Gold & Silver Rates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      text-align: center;
+      padding: 20px;
+    }
+    header {
+      background: #d4af37;
+      color: white;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    .card {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    h2 { color: #333; }
+    .rate {
+      font-size: 22px;
+      color: #d4af37;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>Shankar Ornaments</header>
+  
+  <div class="card">
+    <h2>Gold Price (Kolkata)</h2>
+    <p>24K Gold: ₹<span id="gold24">Loading...</span>/g</p>
+    <p>22K Gold: ₹<span id="gold22">Loading...</span>/g</p>
+  </div>
+
+  <div class="card">
+    <h2>Silver Price (Kolkata)</h2>
+    <p>Silver: ₹<span id="silver">Loading...</span>/g</p>
+  </div>
+
+  <footer>
+    © 2025 Shankar Ornaments | Updated Daily
+  </footer>
+
+  <script>
+    async function getRates() {
+      // Static example data (Can be replaced with API later)
+      let rates = {
+        gold24: 10048,
+        gold22: 9210,
+        silver: 118
+      };
+      document.getElementById('gold24').textContent = rates.gold24;
+      document.getElementById('gold22').textContent = rates.gold22;
+      document.getElementById('silver').textContent = rates.silver;
+    }
+    getRates();
+  </script>
+</body>
+</html>
